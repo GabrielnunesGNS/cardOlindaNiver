@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deixar presente</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header class="container-header">
+            <img src="assets/image/cabecalhoAniversario.png" alt="cabecalho-fundo">
+        </header>
+        <main class="container-cota">
+            <div>
+                <h2>Compre uma cota e o valor será repassado diretamente para a Aniversariante</h2>
+            </div>
+            <div>
+                <form class="form-cota">
+                    <div  class="box-indentificacao" id="box-indentificacao">
+                        <input type="text" placeholder="Nome" required>
+                        <textarea name="mensagem" id="" placeholder="Deixe aqui uma mensagem para Olinda"></textarea>
+                    </div>
+                    <div id="box-cota">
+                        <div>
+                            <h4>Não fique na dúvida, compre agora sua cota e presentei quem voê ama!</h4>
+                        </div>
+                        <div class="cota-value" id="cota-value">
+                            <div><input type="radio" id="cota50" name="cota"  value="50"> <label for="cota50"> 1 COTA - R$50,00</label></div>
+                            <div><input type="radio" id="cota100" name="cota"  value="100"> <label for="cota100"> 2 COTA - R100,00</label></div>
+                            <div><input type="radio" id="cota150" name="cota" value="150"> <label for="cota150"> 3 COTA - R$150,00</label></div>
+                            <div><input type="radio" id="corta200" name="cota"value="200"> <label for="cota200"> 4 COTA - R$200,00</label></div>
+                            <div><p >Obs: Cotas possuim um limite, não deixe para depois</p></div>
+                            <div><input type="text" placeholder="outro valor/ R$ 00,00"  pattern="[0-9]"></div>
+                            
+                        </div>
+                        
+                        <div class="box-btn">
+                            <div>
+                                <p class="observacao">Pagamento realizados atraves de transferencia via pix</p>
+                            </div>
+                            <button class="btn-color " disabled>Proseguir com o mimo</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="box-btn">
+                <a class="btn-color btn-voltar" href="confirmacaoPresenca.html" >Voltar </a>
+            </div>
+        </main>
+    </div>
+    
+</body>
+</html>

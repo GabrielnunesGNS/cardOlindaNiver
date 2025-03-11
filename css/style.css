@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+@media(max-width:550px){
+
+    *{
+        font-family: "Open Sans", sans-serif;
+                
+    }
+
+    a{
+        text-decoration: none;
+        color:#fff
+    }
+
+    /* pagina inicial */
+    .container-inicial{
+        background-color: #000;
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: end;
+        background-image: url(/assets/image/cartaoAniversario.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .container-presenca{
+        margin-bottom: 30%;
+        color: #fff;
+        font-size: 1.2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+
+    .btn-color{
+        width: 90%;
+        text-align: center;
+        font-size: 1.1rem;
+        margin:auto;
+        padding: .5rem;
+        
+        background-color: #fdea57;
+        border: 1px solid transparent;
+        border-radius: 5px;
+        cursor: pointer;
+        
+    }
+    
+/* pagina confirmaçao presença */
+
+    .container-header img{
+        object-fit: cover;
+        width: 100%;
+
+    }
+
+    .container{
+        height: 100vh;
+        background-image: url(/assets/image/fundoDegrade.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .container-form{
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 5% ;
+    }
+
+
+    .container-form form{
+        width: 100%;
+        
+        padding: .5rem;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .container-form form h3{
+        margin: auto;
+        margin-bottom: 1rem;
+        
+        font-size: 1.6rem;
+        color: #fff;
+        font-weight: bold;
+    }
+
+    input[type=text]{
+        padding:.5rem .3rem;
+        width: 100%;
+        box-sizing: border-box;
+        height: 2rem;
+        margin-bottom: .5rem;
+        border:1px solid #fbec83;
+        border-radius: 7px;
+        outline: none;
+        text-transform: capitalize;
+    }
+
+    input[type=radio]{
+        border: 0px;
+        width: 1.1rem;
+        height: 1.1rem;
+        margin: 0 .2rem 0 .15rem;
+        
+        vertical-align: middle;
+
+    }
+
+
+    .radio-dependente{
+        margin-bottom: 1rem;
+        font-size: 1rem;
+
+    }
+    
+    .radio-dependente label{
+        margin-left: .3rem;
+        font-size: .9rem;
+
+    }
+
+    .presente-box{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .presente-box h3{
+        font-size: 1rem !important;
+        margin: 2rem 0 1rem 0  !important;
+        text-align: center;
+        font-weight: 400 !important;
+    }
+
+    .presente-box a{
+        width: 90%;
+
+
+    }
+
+    .presente-box h3 span{
+        font-weight: bold;
+        
+    }
+
+
+    .btn-enviar{
+        
+        margin-top: 4rem;
+        
+        
+    }
+
+
+    /* pagina sistema de cota */
+
+
+
+    .form-cota{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container-cota{
+        
+        background-color: rgba(255, 255, 2555, 0.5);
+        margin: 5%;
+        padding: .7rem;
+        border-radius: 7px;
+
+
+    }
+
+    .container-cota h2{
+        text-align: center;
+        margin-bottom: .5rem;
+
+
+    }
+
+    .box-indentificacao textarea{
+        width: 100%;
+        border:1px solid  #fbec83;
+        box-sizing: border-box;
+        border-radius: 7px 7px 0 7px;
+        padding: .3rem;
+
+
+    }
+
+    #box-cota{
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+        margin-top: .7rem;
+    }
+
+    .cota-value{
+        display: flex;
+        flex-direction: column;
+        margin-top: .5rem;
+        gap: .5rem;
+    }
+
+
+    .cota-value p {
+        font-size: .6rem;
+
+    }
+
+    .observacao{
+        font-size: .835rem;
+        text-align: center;
+
+    }
+
+    .box-btn{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap:.2rem
+    }
+
+    .btn-voltar{
+        margin: 2rem 0;
+
+
+    }
+
+}   
