@@ -1,8 +1,28 @@
-const cmpNomePresença = document.getElementById('nomeCompleto')
+let cmpNomePresença = document.getElementById('nomeCompleto')
 const possuiDep = document.querySelectorAll('input[name="dependente"]')
-const cmpDep1 = document.getElementById('nome-dep-1')
-const cmpDep2 = document.getElementById('nome-dep-2')
-const btnEnviar = document.getElementById('btn-enviar')
+let cmpDep1 = document.getElementById('nome-dep-1')
+let cmpDep2 = document.getElementById('nome-dep-2')
+const btnEnviar = document.querySelector('#btn-enviar')
+const btnMimo = document.querySelector('#btn-presente')
+const cotas = document.querySelectorAll('input[type=radio]')
+
+
+window.addEventListener('load',()=>{
+    let nomeSalvo = localStorage.getItem('nome') 
+    
+    if(!nomeSalvo){
+        console.log(nomeSalvo)
+       
+    }else{
+        cmpNomePresença.value = nomeSalvo;
+    }
+})
+    
+
+
+
+
+
 
 possuiDep.forEach(input => {
     
@@ -21,34 +41,80 @@ possuiDep.forEach(input => {
 
 
 function createMensagem(){
+   
+    let mensagemDeixada = localStorage.getItem("mensagem")
     
-    
-    
+            
 
-    let mensagem = `
+    if(cmpNomePresença.value ==''){
+        cmpNomePresença.style.borderColor = 'red'
+        cmpNomePresença.focus()
+        return ''
+        
+    }else{
+        
+        if(cmpDep1.value == ""){
+            dependente = ' ';
+        }else{
+            dependente = `
+            levando comigo:
+                ${cmpDep1.value.toUpperCase()}
+                ${cmpDep2.value.toUpperCase()}
+                `
+        }
+        
+
+        let mensagem = `
     *Momentos de felidade devem ser comemorados junto a quem amamos*
-    
     *${cmpNomePresença.value.toUpperCase()}* 
-    Confirmou que estará presente em seu aniversario
+    ${dependente}
+    ${mensagemDeixada}
+
+
+    `   
     
-    levando junto:
-    ${cmpDep1.value.toUpperCase()}
-    ${cmpDep2.value.toUpperCase()}
+        return mensagem;
+    }
+
     
-    `
- 
-    return mensagem;
 }
     
     
+cotas.forEach(item =>{
+    item.addEventListener('click', ()=>{
+            if(item.checked){
+                btnMimo.removeAttribute('disabled','' );
+            }else{}
+
+            btnMimo.addEventListener('click',()=>{
+                let nome = document.getElementById('nomeCompleto').value
+                let mensagem = document.getElementById('mensagemAniversario').value;
+                localStorage.setItem('mensagem', mensagem );
+                localStorage.setItem('nome', nome);
+            
+
+            })
+        })
+    }
+)
+
 
 
 
 
 // envio de mensagem
 btnEnviar.addEventListener('click',()=>{
+    
     const mensagemWapp = createMensagem()
-    enviarMensagemWhatsApp(mensagemWapp)
+    if(mensagemWapp === ''){
+        
+    }else{
+        
+        // enviarMensagemWhatsApp(mensagemWapp)
+        localStorage.removeItem('nome')
+        localStorage.removeItem('mensagem')
+    }
+    console.log(mensagemWapp)
 });
 
 
