@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olinda</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+<body>
+    <div class="container">
+        <main class="container-inicial">    
+            <div class="container-presenca">
+                <h2 class="title-confrima-presenca">Confirme sua presença</h2>
+                <a class="btn-color" id="btn-presenca" href="confirmacaoPresenca2.php">Confirmar Presença</a>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
