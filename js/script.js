@@ -95,14 +95,12 @@ function createMensagem(){
         }
         
 
-        let mensagem = `
-    *Momentos de felicidade devem ser comemorados junto a quem amamos*
+        let mensagem = 
+            `*Momentos de felicidade devem ser comemorados junto a quem amamos*
     *${cmpNomePresença.value.toUpperCase()}* 
     confirmou presença em seu aniversario
     ${dependente}
-
-    ${mensagemDeixada}
-    `   
+    ${mensagemDeixada}`   
     
         return mensagem;
     }
