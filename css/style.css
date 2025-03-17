@@ -28,23 +28,21 @@
     }
 
     .container-presenca{
-        margin-bottom: 30%;
+        margin-bottom: 20%;
         color: #fff;
         font-size: 1.2rem;
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 1rem;
+        
     }
 
 
     .btn-color{
-        width: 90%;
         text-align: center;
         font-size: 1.1rem;
         margin:auto;
         padding: .5rem;
-        
         background-color: #fdea57;
         border: 1px solid transparent;
         border-radius: 5px;
@@ -139,7 +137,7 @@
     }
 
     .presente-box h3{
-        font-size: 1rem !important;
+        font-size: 1.2rem !important;
         margin: 2rem 0 1rem 0  !important;
         text-align: center;
         font-weight: 400 !important;
