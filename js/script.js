@@ -91,16 +91,18 @@ function createMensagem(){
         }else{
             dependente = `
             levando comigo:
-                ${cmpDep1.value.toUpperCase()}
-                ${cmpDep2.value.toUpperCase()}
+                *${cmpDep1.value.toUpperCase()}*
+                *${cmpDep2.value.toUpperCase()}*
                 `
         }
         
 
         let mensagem = `
-    *Momentos de felidade devem ser comemorados junto a quem amamos*
+    *Momentos de felicidade devem ser comemorados junto a quem amamos*
     *${cmpNomePresença.value.toUpperCase()}* 
+    confirmou presença em seu aniversario
     ${dependente}
+
     ${mensagemDeixada}
 
 
