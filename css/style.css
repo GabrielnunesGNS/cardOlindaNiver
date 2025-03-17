@@ -15,7 +15,7 @@
     /* pagina inicial */
     .container-inicial{
         background-color: #000;
-        height: 100dvh;
+        height: 100vh;
         width: 100%;
         display: flex;
         flex-direction: column;
