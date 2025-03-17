@@ -1,25 +1,58 @@
 let cmpNomePresença = document.getElementById('nomeCompleto')
-const possuiDep = document.querySelectorAll('input[name="dependente"]')
 let cmpDep1 = document.getElementById('nome-dep-1')
 let cmpDep2 = document.getElementById('nome-dep-2')
+const possuiDep = document.querySelectorAll('input[name="dependente"]')
 const btnEnviar = document.querySelector('#btn-enviar')
 const btnMimo = document.querySelector('#btn-presente')
-const cotas = document.querySelectorAll('input[type=radio]')
+const cotas = document.querySelectorAll('input[name="cota"]')
+
 
 
 window.addEventListener('load',()=>{
     let nomeSalvo = localStorage.getItem('nome') 
     
     if(!nomeSalvo){
-        console.log(nomeSalvo)
+        
        
     }else{
         cmpNomePresença.value = nomeSalvo;
     }
 })
     
+function linkCotas(nomeCota){
+    url50 = 'https://mpago.la/1p3ty2K'
+    url100 = 'https://mpago.la/29VVxtQ'
+    url150 = 'https://mpago.la/1Yyd8qX'
+    url200 = 'https://mpago.la/2fHHS7e'
+    urlOutro = 'http://link.mercadopago.com.br/nnovoconceito'
+    
+    
+    switch(nomeCota){
+        case 'cota50':
+            window.open(url50,'_blank')
+            break
+        case 'cota100':
+            window.open(url100,'_blank')
+            break
+        case 'cota150':
+            window.open(url150,'_blank')
+            break
+        case 'cota200':
+            window.open(url200, '_blank')
+            break
+        case 'outro':
+            window.open(urlOutro, '_blank')
+            break
 
+        default:
+            console.error(nomeCota)
+    }
 
+    
+
+}
+
+     
 
 
 
@@ -81,8 +114,12 @@ function createMensagem(){
     
     
 cotas.forEach(item =>{
+    
+
+    
     item.addEventListener('click', ()=>{
-            if(item.checked){
+            
+        if(item.checked){
                 btnMimo.removeAttribute('disabled','' );
             }else{}
 
@@ -91,6 +128,9 @@ cotas.forEach(item =>{
                 let mensagem = document.getElementById('mensagemAniversario').value;
                 localStorage.setItem('mensagem', mensagem );
                 localStorage.setItem('nome', nome);
+                linkCotas(item.value)
+                
+                
             
 
             })
@@ -114,9 +154,8 @@ btnEnviar.addEventListener('click',()=>{
         localStorage.removeItem('nome')
         localStorage.removeItem('mensagem')
     }
-    console.log(mensagemWapp)
+    
 });
-
 
 function enviarMensagemWhatsApp(mensagem) {
     // numero da empresa a ser envoiado a mensagem
@@ -131,9 +170,4 @@ function enviarMensagemWhatsApp(mensagem) {
     
     // Abre o link no navegador
     window.open(url, '_blank');
-}          
-
-
-
-
-
+}     
