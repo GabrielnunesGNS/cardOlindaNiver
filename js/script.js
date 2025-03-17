@@ -45,7 +45,7 @@ function linkCotas(nomeCota){
             break
 
         default:
-            console.error(nomeCota)
+            console.log("cota não identificada")
     }
 
     
@@ -152,7 +152,7 @@ btnEnviar.addEventListener('click',()=>{
         
     }else{
         
-        // enviarMensagemWhatsApp(mensagemWapp)
+        enviarMensagemWhatsApp(mensagemWapp)
         localStorage.removeItem('nome')
         localStorage.removeItem('mensagem')
     }
@@ -161,7 +161,7 @@ btnEnviar.addEventListener('click',()=>{
 
 function enviarMensagemWhatsApp(mensagem) {
     // numero da empresa a ser envoiado a mensagem
-    const numero = "+5511944022240";
+    const numero = "+5511979681204";
     const numeroFormatado = numero.replace(/\D/g, '');// Formata o número de telefone, removendo espaços e caracteres especiais
     
     // Codifica a mensagem para garantir que caracteres especiais sejam tratados corretamente
