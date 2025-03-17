@@ -89,11 +89,9 @@ function createMensagem(){
         if(cmpDep1.value == ""){
             dependente = ' ';
         }else{
-            dependente = `
-            levando comigo:
-                *${cmpDep1.value.toUpperCase()}*
-                *${cmpDep2.value.toUpperCase()}*
-                `
+            dependente = `levando comigo:
+            *${cmpDep1.value.toUpperCase()}*
+            *${cmpDep2.value.toUpperCase()}*`
         }
         
 
@@ -104,8 +102,6 @@ function createMensagem(){
     ${dependente}
 
     ${mensagemDeixada}
-
-
     `   
     
         return mensagem;
