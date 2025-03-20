@@ -5,10 +5,23 @@ const possuiDep = document.querySelectorAll('input[name="dependente"]')
 const btnEnviar = document.querySelector('#btn-enviar')
 const btnMimo = document.querySelector('#btn-presente')
 const cotas = document.querySelectorAll('input[name="cota"]')
-
-
+const btnPresenca = document.getElementById('btn-confirmacao')
 
 window.addEventListener('load',()=>{
+    let data = new Date()
+    let dia = data.getDate()
+    let mes = data.getMonth()
+    let mesFormatado = mes + 1     
+    
+    console.log(`${dia} + ${mesFormatado}`)
+
+if(dia > 13 && mes == 4){
+    btnPresenca.textContent = 'Indisponível'
+    btnPresenca.style.opacity = '0.9'
+    btnPresenca.removeAttribute('href')
+}
+    
+    
     let nomeSalvo = localStorage.getItem('nome') 
     
     if(!nomeSalvo){
