@@ -158,14 +158,13 @@ cotas.forEach(item =>{
 
 
 
-// envio de mensagem
+
 btnEnviar.addEventListener('click',()=>{
     
     const mensagemWapp = createMensagem()
     if(mensagemWapp === ''){
         
     }else{
-        alert(mensagemWapp)
         enviarMensagemWhatsApp(mensagemWapp)
         localStorage.removeItem('nome')
         localStorage.removeItem('mensagem')
@@ -174,16 +173,9 @@ btnEnviar.addEventListener('click',()=>{
 });
 
 function enviarMensagemWhatsApp(mensagem) {
-    // numero da empresa a ser envoiado a mensagem
     const numero = "+5511979681204";
-    const numeroFormatado = numero.replace(/\D/g, '');// Formata o número de telefone, removendo espaços e caracteres especiais
-    
-    // Codifica a mensagem para garantir que caracteres especiais sejam tratados corretamente
+    const numeroFormatado = numero.replace(/\D/g, '');
     const mensagemCodificada = encodeURIComponent(mensagem);
-    
-    // Cria o link para o WhatsApp
     const url = `https://wa.me/${numeroFormatado}?text=${mensagemCodificada}`;
-    
-    // Abre o link no navegador
     window.open(url, '_blank');
 }     
