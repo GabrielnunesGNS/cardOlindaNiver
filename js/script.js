@@ -3,6 +3,7 @@ let cmpDep1 = document.getElementById('nome-dep-1')
 let cmpDep2 = document.getElementById('nome-dep-2')
 const possuiDep = document.querySelectorAll('input[name="dependente"]')
 const btnEnviar = document.querySelector('#btn-enviar')
+const btnVoltar = document.querySelector('#btn-voltar')
 const btnMimo = document.querySelector('#btn-presente')
 const cotas = document.querySelectorAll('input[name="cota"]')
 const btnPresenca = document.getElementById('btn-confirmacao')
@@ -12,10 +13,7 @@ window.addEventListener('load',()=>{
     let dia = data.getDate()
     let mes = data.getMonth()
     let mesFormatado = mes + 1     
-    
-    console.log(`${dia} + ${mesFormatado}`)
-
-if(dia > 13 && mes == 4){
+if(dia > 13 && mesFormatado == 4){
     btnPresenca.textContent = 'Indisponível'
     btnPresenca.style.opacity = '0.9'
     btnPresenca.removeAttribute('href')
@@ -120,17 +118,26 @@ function createMensagem(){
 
     
 }
+
+
     
     
 cotas.forEach(item =>{
     
-
+    btnVoltar.addEventListener('click',()=>{
+        let nome = document.getElementById('nomeCompleto').value
+        let mensagem = document.getElementById('mensagemAniversario').value;
+        localStorage.setItem('mensagem', mensagem );
+        localStorage.setItem('nome', nome);
+    })
     
     item.addEventListener('click', ()=>{
             
         if(item.checked){
                 btnMimo.removeAttribute('disabled','' );
             }else{}
+
+            
 
             btnMimo.addEventListener('click',()=>{
                 let nome = document.getElementById('nomeCompleto').value
@@ -158,7 +165,7 @@ btnEnviar.addEventListener('click',()=>{
     if(mensagemWapp === ''){
         
     }else{
-        
+        alert(mensagemWapp)
         enviarMensagemWhatsApp(mensagemWapp)
         localStorage.removeItem('nome')
         localStorage.removeItem('mensagem')
