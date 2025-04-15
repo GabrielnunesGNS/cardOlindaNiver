@@ -14,9 +14,10 @@ window.addEventListener('load',()=>{
     let mes = data.getMonth()
     let mesFormatado = mes + 1     
 if(dia > 13 && mesFormatado == 4){
-    btnPresenca.textContent = 'Indisponível'
-    btnPresenca.style.opacity = '0.9'
-    btnPresenca.removeAttribute('href')
+    btnEnviar.textContent = 'Indisponível'
+    btnEnviar.style.opacity = '0.9'
+    cmpNomePresença.setAttribute('disabled','')
+    btnEnviar.removeAttribute('href')
 }
     
     
@@ -72,8 +73,7 @@ possuiDep.forEach(input => {
     
    input.addEventListener('click', ()=>{
         if(input.value == 'sim'){
-            cmpDep1.removeAttribute('disabled','' )
-            cmpDep2.removeAttribute('disabled','' )
+            
         }if(input.value == 'nao'){
             cmpDep1.setAttribute('disabled','' )
             cmpDep2.setAttribute('disabled','' )
