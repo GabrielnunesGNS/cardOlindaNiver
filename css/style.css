@@ -366,7 +366,6 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -512,7 +511,6 @@
 
     .container-form form{
         width: 100%;
-        
         padding: .5rem;
         box-sizing: border-box;
         display: flex;
@@ -623,7 +621,9 @@
 
     }
 
-    
+    .box-indentificacao{
+        width: 100%;
+    }
 
     .box-indentificacao textarea{
         width: 100%;
@@ -653,7 +653,8 @@
 
 
     .cota-value p {
-        font-size: .6rem;
+        font-size: .8rem;
+        font-weight: bold;
 
     }
 
