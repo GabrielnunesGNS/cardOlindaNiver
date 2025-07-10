@@ -12,16 +12,30 @@
 <body>
     <div class="container">
         <header class="container-header">
-            <img src="assets/image/cabecalhoAniversario.png" alt="cabecalho-fundo">
+            <div class="informacaoes destaque">
+                    <div class="data">
+                        <!-- informações das datas local e horario do evento -->
+                        <p>Data</p>
+                        <h6>30/02</h6>
+                    </div>
+                    <div class="local">
+                        <p>Local</p>
+                        <h6>insira aqui seu local do evento</h6>
+                    </div>
+                    <div class="horario destaque">
+                        <p>Horário</p>
+                        <h6>20h00</h6>
+                    </div>
+                </div>
         </header>
         <main class="container-form">
             <form>
                 <h3>Confirme sua presença</h3>
                 <div>
-                    <input type="text" name='nomeCompleto' id="nomeCompleto" placeholder="Nome completo" value="">
+                    <input type="text" name='nomeCompleto' id="nomeCompleto" placeholder="Nome completo" value="" required>
                 </div>
                 <div class="radio-dependente">
-                    <label for="dependente">Possui dependentes ?</label>
+                    <label for="dependente">Possui dependentes ?</labels>
                     <input type="radio" name="dependente"  value="sim"  >sim
                     <input type="radio" name="dependente"  value="nao" checked>Não
                 </div>
@@ -33,11 +47,11 @@
                 </div>
                 
                 <div class="presente-box">
-                    <h3>Gostaria de deixa um presente para a <span>Olinda</span>?</h3>
+                    <h3>Gostaria de deixa um presente para a <span>NOME </span>?</h3>
                     <a href="presente.html" class="btn-color btn-confirm"  >Deixar presente </a>
                 </div>
             </form>
-            <button class="btn-color btn-enviar" id="btn-enviar">Enviar confirmação</button>
+            <button type="button" class="btn-color btn-enviar" id="btn-enviar">Enviar confirmação</button>
         </main>
     </div>
 </body>

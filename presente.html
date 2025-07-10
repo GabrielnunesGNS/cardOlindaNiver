@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Deixar presente</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js" defer></script>
@@ -11,7 +12,21 @@
 <body>
     <div class="container">
         <header class="container-header">
-            <img src="assets/image/cabecalhoAniversario.png" alt="cabecalho-fundo">
+            <div class="informacaoes destaque">
+                    <div class="data">
+                        <!-- informações das datas local e horario do evento -->
+                        <p>Data</p>
+                        <h6>30/02</h6>
+                    </div>
+                    <div class="local">
+                        <p>Local</p>
+                        <h6>insira aqui seu local do evento</h6>
+                    </div>
+                    <div class="horario destaque">
+                        <p>Horário</p>
+                        <h6>20h00</h6>
+                    </div>
+                </div>
         </header>
         <main class="container-cota">
             <div>
@@ -21,7 +36,7 @@
                 <form class="form-cota">
                     <div  class="box-indentificacao" id="box-indentificacao">
                         <input type="text" name='nomeCompleto' id="nomeCompleto" placeholder="Nome">
-                        <textarea name="mensagem" id="mensagemAniversario" placeholder="Deixe aqui uma mensagem para Olinda"></textarea>
+                        <textarea name="mensagem" id="mensagemAniversario" placeholder="Deixe aqui uma mensagem para NOME"></textarea>
                     </div>
                     <div id="box-cota">
                         <div>
@@ -31,16 +46,16 @@
 
                 
                         <div class="cota-value" id="cota-value">
-                            <div><input type="radio" id="cota50" name="cota"  value="cota50"  > <label for="cota50">1 COTA - R$50,00  </label><span></span></div>
-                            <div><input type="radio" id="cota100" name="cota"  value="cota100"> <label for="cota100">2 COTA - R100,00</label></div>
+                            <div><input type="radio" id="cota50" name="cota"  value="cota50"  > <label for="cota50">1 COTA - R$50,00  </label></div>
+                            <div><input type="radio" id="cota100" name="cota"  value="cota100"> <label for="cota100">2 COTA - R$100,00</label></div>
                             <div><input type="radio" id="cota150" name="cota" value="cota150"> <label for="cota150">3 COTA - R$150,00</label></div>
-                            <div><input type="radio" id="corta200" name="cota" value="cota200"> <label for="cota200">4 COTA - R$200,00</label></div>
-                            <div><input type="radio" id="cotaoutro" name="cota" value="outro"> <label for="outro">Outro</label></div>
+                            <div><input type="radio" id="cota200" name="cota" value="cota200"> <label for="cota200">4 COTA - R$200,00</label></div>
+                            <div><input type="radio" id="cotaOutro" name="cota" value="outro"> <label for="cotaOutro">Outro</labels></div>
                             <p>Pagamento realizado através do mercado pago para novo conceito</p>
                         </div>
                         
                         <div class="box-btn">
-                            <button class="btn-color btn-checked " id="btn-presente" disabled >Proseguir com o mimo</button>
+                            <button type="button" class="btn-color btn-checked " id="btn-presente" disabled >Proseguir com o mimo</button>
                         </div>
                     </div>
                 </form>

@@ -1,5 +1,351 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
+*{
+        font-family: "Open Sans", sans-serif;
+        color: #333;
+    }
+
+    a{
+        text-decoration: none;
+        color:#fff
+    }
+
+    body{
+        background-image: url(../assets/image/fundo_desktop.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+    }
+
+    /* pagina inicial */
+    .container-inicial{
+        height: 100dvh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .container-foto{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 2rem;
+        margin-top: 4rem;
+        text-align: center;
+
+    }
+    h1{
+        font-size: 1.5rem
+    }
+
+    .container-foto img{
+        height: 120px;
+        width: auto;
+        border-radius: 50%;
+        margin-bottom: 1rem;
+    }
+
+    .descricao-evento{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content:space-between;
+        height:50%;
+        width: 400px;
+        text-align: justify;
+
+
+    }
+
+    .container-mensagem{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        gap: 1rem;
+        height: 100%;
+
+    }
+
+    .container-presenca{
+        margin-bottom: 20%;
+        color: #fff;
+        font-size: 1.2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+
+    .informacaoes{
+        color: #fff !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: .8rem ;
+        padding: 1rem .8rem  ;
+    }
+
+    .informacaoes div{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        text-align: center;
+        min-height: 70px;
+        max-height: 100px;
+
+    }
+
+    .local{
+        padding: 0 1rem;
+        border-width:  0 1px 0 1px;
+        border-style: solid;
+        border-color: #fff;
+    }
+    
+    .informacaoes div h6{
+        margin-top: .5rem;
+        height: 100%;
+    }
+
+    .local h6{
+        font-size: 1rem;
+    }
+
+    .destaque{
+        font-size: 1.4rem;
+    }
+
+    .btn-color{
+        text-align: center;
+        font-size: 1.1rem;
+        
+        padding: .5rem;
+        background-color: #f42819;
+        border: 1px solid #72727224;
+        border-radius: 5px;
+        color: #fff;
+        cursor: pointer;
+        transition: .8s;
+        
+    }
+
+    .btn-color:hover{
+        opacity: 0.8;
+    }
+
+    .btn-color:disabled{
+        opacity: 0.7;
+    }
+
+   
+
+
+
+
+    
+/* pagina confirmaçao presença */
+
+    .container-header img{
+        object-fit: cover;
+        width: 100%;
+
+    }
+
+    .container{
+        height: 100vh;
+        
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .container-form{
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 5% ;
+    }
+
+
+    .container-form form{
+        
+        padding: .5rem;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .container-form form h3{
+        margin: auto;
+        margin-bottom: 1rem;
+        
+        font-size: 1.6rem;
+        color: #fff;
+        font-weight: bold;
+    }
+
+    input[type=text]{
+        padding:.5rem .3rem;
+        width: 100%;
+        box-sizing: border-box;
+        height: 2rem;
+        margin-bottom: .5rem;
+        border:1px solid #fbec83;
+        border-radius: 7px;
+        outline: none;
+        text-transform: capitalize;
+    }
+
+    input[type=radio]{
+        border: 0px;
+        width: 1.1rem;
+        height: 1.1rem;
+        margin: 0 .2rem 0 .15rem;
+        cursor: pointer;
+        vertical-align: middle;
+
+    }
+
+
+    .radio-dependente{
+        margin-bottom: 1rem;
+        font-size: 1rem;
+
+    }
+    
+    .radio-dependente label{
+        margin-left: .3rem;
+        font-size: .9rem;
+        
+
+    }
+
+    .presente-box{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .presente-box h3{
+        font-size: 1.3rem !important;
+        margin: 2rem 0 1rem 0  !important;
+        text-align: center;
+        font-weight: 400 !important;
+    }
+
+    .presente-box a{
+        width: 90%;
+
+
+    }
+
+    .presente-box h3 span{
+        font-weight: bold;
+        color: #fc4011;
+        
+    }
+
+    .presente-box a{
+        font-size: 1.3;
+
+    }
+
+    .btn-enviar{
+        
+        margin-top: 4rem;
+        
+        
+    }
+
+
+    /* pagina sistema de cota */
+
+
+
+    .form-cota{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container-cota{
+        margin: 5%;
+    }
+
+    .container-cota h2{
+        text-align: center;
+        margin-bottom: .5rem;
+
+
+    }
+    .box-indentificacao{
+        width: 500px;
+    }
+    
+
+    .box-indentificacao textarea{
+        width: 100%;
+        height: 4rem;
+        border:1px solid  #fbec83;
+        box-sizing: border-box;
+        border-radius: 7px 7px 0 7px;
+        padding: .3rem;
+        outline: none;
+        resize: none;
+
+    }
+
+    #box-cota{
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+        margin-top: .7rem;
+    }
+
+    .cota-value{
+        display: flex;
+        flex-direction: column;
+        margin-top: .5rem;
+        gap: .5rem;
+    }
+
+
+    .cota-value p {
+        font-size: .8rem;
+
+    }
+
+    .observacao{
+        font-size: .835rem;
+        text-align: center;
+
+    }
+
+    .box-btn{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap:.2rem
+    }
+
+    .btn-voltar{
+        margin: 2rem 0;
+
+
+    }
+
+
+
+
+
 @media(max-width:550px){
 
     *{
@@ -14,17 +360,54 @@
 
     /* pagina inicial */
     .container-inicial{
-        background-color: #000;
         height: 100dvh;
         width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: end;
-        background-image: url(../assets/image/cartaoAniversario.png);
+        justify-content: center;
+        
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
+    }
+
+    .container-foto{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 2rem;
+        margin-top: 4rem;
+        text-align: center;
+
+    }
+    h1{
+        font-size: 1.5rem
+    }
+
+    .container-foto img{
+        height: 120px;
+        width: auto;
+        border-radius: 50%;
+        margin-bottom: 1rem;
+    }
+
+    .descricao-evento{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content:space-between;
+        height:50%;
+
+
+    }
+
+    .container-mensagem{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 1rem;
+        height: 100%;
     }
 
     .container-presenca{
@@ -38,10 +421,50 @@
     }
 
 
+    .informacaoes{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem;
+        margin: 5% 5%;
+        gap: .8rem ;
+        padding: .8rem;
+    }
+
+    .informacaoes div{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        text-align: center;
+        min-height: 70px;
+        max-height: 100px;
+
+    }
+
+    .local{
+        padding: 0 1rem;
+        border-width:  0 1px 0 1px;
+        border-style: solid;
+        border-color: #fff;
+    }
+    
+    .informacaoes div h6{
+        margin-top: .5rem;
+        height: 100%;
+    }
+
+    .local h6{
+        font-size: 1rem;
+    }
+
+    .destaque{
+        font-size: 1.4rem;
+    }
+
     .btn-color{
         text-align: center;
         font-size: 1.1rem;
-        margin:auto;
+        
         padding: .5rem;
         background-color: #ff6038;
         border: 1px solid #72727224;
@@ -55,20 +478,27 @@
     }
 
    
+
+
+
+
     
 /* pagina confirmaçao presença */
 
+    *{
+        color: #fff;
+    }
     .container-header img{
         object-fit: cover;
         width: 100%;
 
     }
 
-    .container{
+    .body{
         height: 100vh;
         background-image: url(../assets/image/fundoDegrade.png);
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: contain;
     }
 
     .container-form{
@@ -192,6 +622,8 @@
 
 
     }
+
+    
 
     .box-indentificacao textarea{
         width: 100%;
